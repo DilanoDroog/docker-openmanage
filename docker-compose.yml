@@ -1,0 +1,13 @@
+version: '2'
+services:
+ osma:
+    container_name: osma
+    build: ./build/.
+    image: dilanodroog/osma
+    network_mode: "host"
+    restart: unless-stopped
+    cap_add:
+     - ALL
+    privileged: true
+    volumes:
+      - "/lib/modules:/lib/modules:ro"
