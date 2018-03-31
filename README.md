@@ -17,7 +17,7 @@ services:
      - ALL
     privileged: true
     volumes:
-- "/lib/modules:/lib/modules:ro"
+     - "/lib/modules:/lib/modules:ro"
 ```
 # Example commands
 `docker-compose up -d`
