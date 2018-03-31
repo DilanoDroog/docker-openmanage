@@ -8,9 +8,9 @@ Note: after starting the container it may take a while before all services are u
 ```
 version: '2'
 services:
- osma:
+ omsa:
     container_name: osma
-    image: dilanodroog/osma
+    image: dilanodroog/omsa
     network_mode: "host"
     restart: unless-stopped
     cap_add:
