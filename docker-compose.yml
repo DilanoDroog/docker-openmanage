@@ -1,9 +1,9 @@
 version: '2'
 services:
- osma:
-    container_name: osma
+ omsa:
+    container_name: omsa
     build: ./build/.
-    image: dilanodroog/osma
+    image: dilanodroog/omsa
     network_mode: "host"
     restart: unless-stopped
     cap_add:
