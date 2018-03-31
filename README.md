@@ -9,7 +9,7 @@ Note: after starting the container it may take a while before all services are u
 version: '2'
 services:
  omsa:
-    container_name: osma
+    container_name: omsa
     image: dilanodroog/omsa
     network_mode: "host"
     restart: unless-stopped
@@ -26,10 +26,10 @@ Start container using the above compose file as daemon
 `docker-compose up -d`
 
 View storage vdisk controller 0
-`docker exec osma omreport storage vdisk controller=0`
+`docker exec omsa omreport storage vdisk controller=0`
 
 Start CC on vdisk 0 with controller 0
-`docker exec osma omconfig storage vdisk action=checkconsistency controller=0 vdisk=0`
+`docker exec omsa omconfig storage vdisk action=checkconsistency controller=0 vdisk=0`
 
 View storage vdisks
-`docker exec osma omreport storage vdisk`
+`docker exec omsa omreport storage vdisk`
