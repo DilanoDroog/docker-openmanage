@@ -19,8 +19,17 @@ services:
     volumes:
      - "/lib/modules:/lib/modules:ro"
 ```
+
 # Example commands
+
+Start container using the above compose file as daemon
 `docker-compose up -d`
-`docker exec osma omreport storage vdisk controller=0
+
+View storage vdisk controller 0
+`docker exec osma omreport storage vdisk controller=0`
+
+Start CC on vdisk 0 with controller 0
 `docker exec osma omconfig storage vdisk action=checkconsistency controller=0 vdisk=0`
+
+View storage vdisks
 `docker exec osma omreport storage vdisk`
