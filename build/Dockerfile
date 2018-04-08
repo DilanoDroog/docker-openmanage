@@ -9,7 +9,7 @@ echo "deb https://linux.dell.com/repo/community/ubuntu xenial openmanage" |  tee
 gpg --keyserver pool.sks-keyservers.net --recv-key 1285491434D8786F && \
 gpg -a --export 1285491434D8786F | apt-key add - && \
 apt update && \
-apt install -y srvadmin-base srvadmin-storageservices srvadmin-idrac kmod && \
+apt install -y srvadmin-base srvadmin-storageservices kmod && \
 apt clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
